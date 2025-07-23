@@ -1,11 +1,13 @@
-# Ignore virtual environment
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environment
 .venv/
 
-# Ignore API keys
-.env
+# Mac OS file
+.DS_Store
 
-# Ignore database file (optional)
+# SQLite database
 ecommerce.db
-
-# Ignore __pycache__ files
-__pycache__/
