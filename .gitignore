@@ -1,0 +1,11 @@
+# Ignore virtual environment
+.venv/
+
+# Ignore API keys
+.env
+
+# Ignore database file (optional)
+ecommerce.db
+
+# Ignore __pycache__ files
+__pycache__/
