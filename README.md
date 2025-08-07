@@ -4,7 +4,7 @@ This project is an intelligent AI agent that understands natural language questi
 
 ---
 
-## 🚀 Features
+##  Features
 
 	•	Natural Language to SQL: Converts plain English questions into valid SQL queries using a local LLaMA 3 model via Ollama.
 	•	FastAPI Backend: Serves endpoints to receive questions and return results in real time.
@@ -14,7 +14,7 @@ This project is an intelligent AI agent that understands natural language questi
 	•	Modular Design: Clean separation of concerns between LLM generation, SQL execution, and API serving.
 
 ---
-### 🔹 Project Structure
+###  Project Structure
 
 ```
 E-commerce_ai_agent/
@@ -32,7 +32,7 @@ E-commerce_ai_agent/
 
 ---
 
-## ⚙️ Setup Instructions
+##  Setup Instructions
 
 ### 1. Clone the Repository
 
@@ -54,7 +54,7 @@ source .venv/bin/activate
 pip install -r requirements.txt
 ```
 
-✅ If requirements.txt is not present, manually install:
+ If requirements.txt is not present, manually install:
 
 ```
 pip install fastapi uvicorn requests sqlite3
@@ -79,7 +79,7 @@ uvicorn api_server:app --reload
 ```
 ⸻
 
-## 🧠 Example Questions
+##  Example Questions
 
 - What is my total sales?
 - Calculate the RoAS (Return on Ad Spend).
@@ -107,7 +107,7 @@ uvicorn api_server:app --reload
 
 ---
 
-## 👨‍💻 Author
+##  Author
 
 **Gokularaman C**  
 ---
