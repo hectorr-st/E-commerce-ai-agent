@@ -41,14 +41,14 @@ git clone https://github.com/gokularaman-c/E-commerce-ai-agent.git
 cd E-commerce-ai-agent
 ```
 
-2. Create and Activate Virtual Environment
+### 2. Create and Activate Virtual Environment
 
 ```
 python3 -m venv .venv
 source .venv/bin/activate
 ```
 
-3. Install Dependencies
+### 3. Install Dependencies
 
 ```
 pip install -r requirements.txt
@@ -60,36 +60,37 @@ pip install -r requirements.txt
 pip install fastapi uvicorn requests sqlite3
 ```
 
-4. Start Ollama (if not running)
+### 4. Start Ollama (if not running)
 
 ```
 ollama run llama3
 ```
 
-5. Load Data into SQLite
+### 5. Load Data into SQLite
 
 ```
 python load_data_to_db.py
 ```
 
-6. Start FastAPI Server
+### 6. Start FastAPI Server
 
 ```
 uvicorn api_server:app --reload
 ```
 ⸻
 
-🧠 Example Questions
-	•	What is my total sales?
-	•	Calculate the RoAS (Return on Ad Spend).
-	•	Which product had the highest CPC?
-	•	Show total ad spend per month.
-	•	What is the average CTR by month?
-	•	List top 5 products by ad sales.
-	•	How many clicks did each product receive?
-	•	Which product had the lowest RoAS?
-	•	What is the total number of impressions?
-	•	Show top 3 products with highest total sales.
+## 🧠 Example Questions
+
+- What is my total sales?
+- Calculate the RoAS (Return on Ad Spend).
+- Which product had the highest CPC?
+- Show total ad spend per month.
+- What is the average CTR by month?
+- List top 5 products by ad sales.
+- How many clicks did each product receive?
+- Which product had the lowest RoAS?
+- What is the total number of impressions?
+- Show top 3 products with highest total sales.
 
 ---
 
@@ -106,7 +107,7 @@ uvicorn api_server:app --reload
 
 ---
 
-👨‍💻 Author
+## 👨‍💻 Author
 
 **Gokularaman C**  
 ---
