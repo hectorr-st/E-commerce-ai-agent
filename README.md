@@ -109,5 +109,5 @@ uvicorn api_server:app --reload
 
 ##  Author
 
-**Gokularaman C**  
+**Suzuki Taro [dr.smart710@gmail.com]**  
 ---
