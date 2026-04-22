@@ -1,113 +1,121 @@
 # E-commerce AI Agent with LLaMA 3 + FastAPI
 
-This project is an intelligent AI agent that understands natural language questions related to e-commerce metrics and returns accurate answers by generating and executing SQL queries on a local database. It uses a locally hosted LLaMA 3 model via Ollama, integrates with FastAPI, and supports streamed responses for a live typing effect.
+An intelligent AI-powered backend that translates natural language questions into SQL queries and retrieves actionable insights from e-commerce datasets. Built with a locally hosted LLaMA 3 model (via Ollama), FastAPI, and SQLite, this project demonstrates how LLMs can be integrated into real-world data systems for analytics and decision support.
 
 ---
 
-##  Features
+## 🚀 Features
 
-	•	Natural Language to SQL: Converts plain English questions into valid SQL queries using a local LLaMA 3 model via Ollama.
-	•	FastAPI Backend: Serves endpoints to receive questions and return results in real time.
-	•	SQLite3 Database: Lightweight and efficient storage for e-commerce metrics.
-	•	Live Typing Effect: Streaming responses simulate human typing for natural interaction.
-	•	cURL + JQ Demo Support: Easily test endpoints from terminal with clean JSON formatting.
-	•	Modular Design: Clean separation of concerns between LLM generation, SQL execution, and API serving.
+- **Natural Language → SQL**  
+  Converts plain English queries into executable SQL using a local LLaMA 3 model.
+
+- **FastAPI Backend**  
+  Provides RESTful endpoints (`/ask`, `/stream`) for real-time interaction.
+
+- **Streaming Responses**  
+  Supports token streaming for a live typing / chat-like experience.
+
+- **SQLite Database**  
+  Lightweight, file-based database for storing e-commerce metrics.
+
+- **Modular Architecture**  
+  Clean separation between:
+  - LLM-based SQL generation  
+  - SQL execution layer  
+  - API interface  
+
+- **CLI-Friendly Testing**  
+  Easily test with `curl` + `jq` for formatted terminal output.
 
 ---
-###  Project Structure
 
+## 📁 Project Structure
+
+E-commerce-ai-agent/
+├── .venv/ # Python virtual environment
+├── .gitignore # Git ignore configuration
+├── README.md # Project documentation
+├── resume.md # Project summary (this file)
+├── Product-Level *.xlsx # Raw e-commerce datasets
+├── load_data_to_db.py # Loads Excel data into SQLite
+├── ecommerce.db # Generated SQLite database
+├── llama_sql_generator.py # LLM-based SQL query generator
+├── llama_sql_executor.py # SQL execution module (optional)
+├── api_server.py # FastAPI app with endpoints
+├── test_database_queries.py # Manual SQL testing script
+
+
+---
+
+## ⚙️ Setup Instructions
+
+### 1. Clone Repository
 ```
-E-commerce_ai_agent/
-├── .venv/                     # Python virtual environment
-├── .gitignore               # Git ignore config
-├── README.md               # Project documentation
-├── Product-Level *.xlsx     # Source Excel datasets
-├── load_data_to_db.py      # Script to load Excel files into SQLite
-├── ecommerce.db            # Generated SQLite database
-├── llama_sql_generator.py  # Converts questions into SQL using LLaMA 3
-├── llama_sql_executor.py   # (Optional) For modular SQL execution
-├── api_server.py           # FastAPI backend with /ask and /stream endpoints
-├── test_database_queries.py # (Optional) Manual SQL query tester
-```
-
----
-
-##  Setup Instructions
-
-### 1. Clone the Repository
-
-```bash
-git clone https://github.com/gokularaman-c/E-commerce-ai-agent.git
+git clone https://github.com/hectorr-st/E-commerce-ai-agent.git
 cd E-commerce-ai-agent
 ```
 
-### 2. Create and Activate Virtual Environment
-
+###2. Create Virtual Environment
 ```
 python3 -m venv .venv
 source .venv/bin/activate
 ```
-
-### 3. Install Dependencies
-
+###3. Install Dependencies
 ```
 pip install -r requirements.txt
 ```
-
- If requirements.txt is not present, manually install:
-
+If requirements.txt is missing:
 ```
-pip install fastapi uvicorn requests sqlite3
+pip install fastapi uvicorn requests pandas openpyxl
 ```
-
-### 4. Start Ollama (if not running)
-
+###4. Start LLaMA 3 via Ollama
 ```
 ollama run llama3
 ```
-
-### 5. Load Data into SQLite
-
+###5. Load Dataset into SQLite
 ```
 python load_data_to_db.py
 ```
-
-### 6. Start FastAPI Server
-
+###6. Run FastAPI Server
 ```
 uvicorn api_server:app --reload
 ```
-⸻
-
-##  Example Questions
-
-- What is my total sales?
-- Calculate the RoAS (Return on Ad Spend).
-- Which product had the highest CPC?
-- Show total ad spend per month.
-- What is the average CTR by month?
-- List top 5 products by ad sales.
-- How many clicks did each product receive?
-- Which product had the lowest RoAS?
-- What is the total number of impressions?
-- Show top 3 products with highest total sales.
 
 ---
 
-🛠 Tech Stack
-
-| Component     | Technology               |
-|---------------|--------------------------|
-| LLM           | LLaMA 3 via Ollama       |
-| Backend       | FastAPI                  |
-| Database      | SQLite3                  |
-| API Testing   | cURL, Swagger UI         |
-| JSON Parsing  | jq (for terminal output) |
-| Dataset Format| Excel (.xlsx → SQLite)   |
+### 🔹 Project Highlights
+- Built an AI-powered system that converts natural language into SQL for e-commerce analytics  
+- Enabled fully local LLM inference using LLaMA 3 via Ollama (no external API dependency)  
+- Designed a scalable, modular backend using FastAPI  
+- Implemented real-time streaming responses for interactive user experience  
+- Applicable to dashboards, internal BI tools, and AI copilots  
 
 ---
 
-##  Author
+### 🔹 Key Functionalities
+- Total sales revenue calculation  
+- Return on Ad Spend (RoAS) analysis  
+- CPC (Cost Per Click) comparison across products  
+- Monthly ad spend trend analysis  
+- CTR (Click-Through Rate) aggregation  
+- Top-performing products by sales  
+- Click distribution per product  
+- Identification of low-performing products (RoAS)  
+- Total impressions tracking  
+- Revenue-based product ranking  
 
-**Suzuki Taro [dr.smart710@gmail.com]**  
 ---
+
+### 🔹 Tech Stack
+- **LLM:** LLaMA 3 (via Ollama)  
+- **Backend:** FastAPI  
+- **Database:** SQLite3  
+- **Data Processing:** Pandas, OpenPyXL  
+- **API Testing:** cURL, Swagger UI  
+- **CLI Tools:** jq  
+
+---
+
+### 👤 Author
+**Suzuki Taro**  
+📧 dr.smart710@gmail.com
