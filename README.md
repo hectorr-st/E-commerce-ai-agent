@@ -32,54 +32,17 @@ An intelligent AI-powered backend that translates natural language questions int
 ## 📁 Project Structure
 
 E-commerce-ai-agent/
-├── .venv/ # Python virtual environment
-├── .gitignore # Git ignore configuration
-├── README.md # Project documentation
-├── resume.md # Project summary (this file)
-├── Product-Level *.xlsx # Raw e-commerce datasets
-├── load_data_to_db.py # Loads Excel data into SQLite
-├── ecommerce.db # Generated SQLite database
-├── llama_sql_generator.py # LLM-based SQL query generator
-├── llama_sql_executor.py # SQL execution module (optional)
-├── api_server.py # FastAPI app with endpoints
-├── test_database_queries.py # Manual SQL testing script
-
-
----
-
-## ⚙️ Setup Instructions
-
-### 1. Clone Repository
-```
-git clone https://github.com/hectorr-st/E-commerce-ai-agent.git
-cd E-commerce-ai-agent
-```
-
-###2. Create Virtual Environment
-```
-python3 -m venv .venv
-source .venv/bin/activate
-```
-###3. Install Dependencies
-```
-pip install -r requirements.txt
-```
-If requirements.txt is missing:
-```
-pip install fastapi uvicorn requests pandas openpyxl
-```
-###4. Start LLaMA 3 via Ollama
-```
-ollama run llama3
-```
-###5. Load Dataset into SQLite
-```
-python load_data_to_db.py
-```
-###6. Run FastAPI Server
-```
-uvicorn api_server:app --reload
-```
+├── .venv/                      # Python virtual environment
+├── .gitignore                 # Git ignore configuration
+├── README.md                  # Project documentation
+├── resume.md                  # Project summary (this file)
+├── Product-Level *.xlsx       # Raw e-commerce datasets
+├── load_data_to_db.py         # Loads Excel data into SQLite
+├── ecommerce.db               # Generated SQLite database
+├── llama_sql_generator.py     # LLM-based SQL query generator
+├── llama_sql_executor.py      # SQL execution module (optional)
+├── api_server.py              # FastAPI app with endpoints
+├── test_database_queries.py   # Manual SQL testing script
 
 ---
 
