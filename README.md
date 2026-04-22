@@ -31,6 +31,7 @@ An intelligent AI-powered backend that translates natural language questions int
 
 ## 📁 Project Structure
 
+```
 E-commerce-ai-agent/
 ├── .venv/                      # Python virtual environment
 ├── .gitignore                 # Git ignore configuration
@@ -43,6 +44,7 @@ E-commerce-ai-agent/
 ├── llama_sql_executor.py      # SQL execution module (optional)
 ├── api_server.py              # FastAPI app with endpoints
 ├── test_database_queries.py   # Manual SQL testing script
+```
 
 ---
 
